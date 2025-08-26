@@ -1,0 +1,77 @@
+/* Custom Glassy Social styles (kept separate from Tailwind) */
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #f8fafc;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.glass {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+}
+
+.btn {
+    padding: 0.6rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.btn:hover{ transform: translateY(-2px); }
+.btn-primary{ background: linear-gradient(135deg,#1DB954,#17a74a); color:#000; }
+.btn-secondary{ background: linear-gradient(135deg,#1877F2,#166fe5); color:#fff; }
+.btn-ghost{ background: rgba(255,255,255,0.04); color:#f8fafc; border:1px solid rgba(255,255,255,0.06); }
+
+.input {
+    background: rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:10px;
+    padding:.6rem .9rem;
+    color: #f8fafc;
+    width:100%;
+}
+
+.input:focus { outline:none; border-color:#1DB954; box-shadow:0 0 0 4px rgba(29,185,84,0.08); }
+
+.reaction-btn {
+    padding:.35rem .6rem;
+    border-radius:9999px;
+    background: rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    color:#f8fafc;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.reaction-btn.active {
+    background: rgba(29,185,84,0.18);
+    border-color:#1DB954;
+    color:#1DB954;
+}
+
+.message { max-width: 70%; padding:.6rem .9rem; border-radius:12px; margin-bottom:.5rem; word-wrap:break-word; }
+.message.own { background:linear-gradient(135deg,#1DB954,#17a74a); color:#000; margin-left:auto; border-bottom-right-radius:6px; }
+.message.other { background: rgba(255,255,255,0.06); color:#f8fafc; margin-right:auto; border-bottom-left-radius:6px; }
+
+.notification { position: fixed; top: 20px; right: 20px; background: rgba(0,0,0,0.9); color:#fff; padding:1rem; border-radius:12px; border-left:4px solid #1DB954; z-index:1000; transform: translateX(120%); transition: transform .28s ease; max-width:320px; }
+.notification.show{ transform: translateX(0); }
+
+.loader { border:3px solid rgba(255,255,255,0.1); border-top:3px solid #1DB954; border-radius:50%; width:20px; height:20px; animation:spin 1s linear infinite; display:inline-block; }
+
+@keyframes spin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+
+@media (max-width:768px){ .message{ max-width:85% } }
