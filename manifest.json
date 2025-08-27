@@ -1,56 +1,42 @@
 {
-  "name": "Alpha-waves by talha",
-  "short_name": "alpha-waves",
-  "description": "A social media style PWA experiment by Talha.",
-  "start_url": ".",
+  "name": "Glassy Social - Complete Social Platform",
+  "short_name": "GlassySocial",
+  "description": "A complete social media platform with real-time chat, posts, and user profiles",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#0a0a0a",
+  "theme_color": "#1DB954",
   "orientation": "portrait",
-  "scope": ".",
-  "id": "/?alpha-waves",
-
-"icons": [
-  {
-    "src": "android-chrome-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png",
-    "purpose": "any"
-  },
-  {
-    "src": "maskable-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png",
-    "purpose": "maskable"
-  },
-  {
-    "src": "android-chrome-512x512.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "any"
-  },
-  {
-    "src": "maskable-512x512.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "maskable"
-  }
-]
-
-
+  "scope": "./",
+  "id": "glassy-social-app",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["social", "productivity", "entertainment"],
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
   "screenshots": [
     {
       "src": "android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Glassy Social App Screenshot"
     }
   ],
-
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-
-  "categories": ["social", "media", "productivity"],
-  "lang": "en",
-  "dir": "ltr"
+  "prefer_related_applications": false
 }
