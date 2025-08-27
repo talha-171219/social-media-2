@@ -1063,13 +1063,15 @@
     // Initial render
     render();
   </script>
-  <script>
+ <script>
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/social-media-2/service-worker.js")
-      .then(reg => console.log("Service Worker registered:", reg))
-      .catch(err => console.error("Service Worker registration failed:", err));
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then((reg) => console.log("SW registered:", reg))
+        .catch((err) => console.log("SW registration failed:", err));
+    });
   }
 </script>
-
 </body>
 </html>
